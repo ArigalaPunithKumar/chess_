@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Chess';
+    src: url('https://www.fontspace.com/chess-font-f28449');
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #00f2ff;
+    width:500px;
+    height:600px;
+    border-radius: 12px;
+  }
+  .chess-board {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    gap: 0;
+  }
+  .chess-board div {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+  }
+  .black {
+    background-color: #769656;
+  }
+  .white {
+    background-color: #d4eed2;
+  }
+  .chess-piece {
+    font-family: 'Chess', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 50px;
+  }
+  .selected {
+    background-color: rgb(182, 173, 230);
+  }
+  .valid-move {
+    background-color: rgba(0, 0, 255, 0.5);
+  }
+  .winner-message {
+    font-size: 2rem;
+    font-weight: bold;
+    color: green;
+    margin-top: 20px;
+  }
+  .btn-primary {
+    background-color:grey;
+    border-color: #ff4800;
+  }
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  .btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .promotion-piece {
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 10px;
+  }
